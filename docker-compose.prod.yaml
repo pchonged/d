@@ -1,0 +1,20 @@
+
+version: '3'
+
+services:
+  deno-app:
+    build:
+      context: .
+      args:
+        NODE_ENV: production
+
+    # container_name: deno-app
+    # image: deno-image
+    # ports:
+    #   - "3000:3000"
+    # volumes:
+    #   - ./:/app
+    #   - /app/deps.ts
+    environment:
+      - NODE_ENV=production
+    command: node index.js

@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  deno-app:
+    container_name: deno-app
+    image: deno-image
+    volumes:
+      - ./:/app
+      # - /deps.ts
+    environment:
+      -  NODE_ENV= development
+    # command: command
